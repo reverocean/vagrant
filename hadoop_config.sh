@@ -1,3 +1,4 @@
+#!/bin/bash
 apt-get install curl -y
 apt-get update
 apt-get -q -y --force-yes installopenjdk-6-jdk
