@@ -1,3 +1,4 @@
 #!/bin/bash
-ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
-cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+su vagrant
+ssh-keygen -t dsa -P '' -f /home/vagrant/.ssh/id_dsa
+cat /home/vagrant/.ssh/id_dsa.pub >> /home/vagrant/.ssh/authorized_keys
