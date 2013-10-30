@@ -16,5 +16,5 @@ ff02::2 ip6-allrouters
 EOF
 
 apt-get install curl -y
-#apt-get update
+apt-get update
 apt-get -q -y --force-yes install openjdk-6-jdk
