@@ -14,3 +14,7 @@ ff02::2 ip6-allrouters
 192.168.56.202	slave2
 192.168.56.203	slave3
 EOF
+
+apt-get install curl -y
+#apt-get update
+apt-get -q -y --force-yes install openjdk-6-jdk

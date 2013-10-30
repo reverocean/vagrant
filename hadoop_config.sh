@@ -1,8 +1,4 @@
 #!/bin/bash
-apt-get install curl -y
-apt-get update
-apt-get -q -y --force-yes installopenjdk-6-jdk
-wget http://mirrors.cnnic.cn/apache/hadoop/common/stable1/hadoop-1.2.1.tar.gz
 tar -zxvf hadoop-1.2.1.tar.gz
 mv hadoop-1.2.1 hadoop-home
 echo "export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64" >> hadoop-home/conf/hadoop-env.sh

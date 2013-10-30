@@ -1,4 +1,2 @@
 #!/bin/bash
-cp ssh_config.sh /home/vagrant/
-cd /home/vagrant
-chomd +x ssh_config.sh
+wget http://mirrors.cnnic.cn/apache/hadoop/common/stable1/hadoop-1.2.1.tar.gz
