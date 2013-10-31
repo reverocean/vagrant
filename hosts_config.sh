@@ -1,4 +1,4 @@
-#!/bin/bash  
+#!/bin/bash
 cat >/etc/hosts <<EOF 
 127.0.0.1       localhost  
   
@@ -13,6 +13,7 @@ ff02::2 ip6-allrouters
 192.168.56.201	slave1
 192.168.56.202	slave2
 192.168.56.203	slave3
+192.168.56.204	zkServer
 EOF
 
 apt-get install curl -y

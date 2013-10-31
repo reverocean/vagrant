@@ -54,7 +54,7 @@ cat > hadoop-home/conf/mapred-site.xml <<EOF
 EOF
 
 cat > hadoop-home/conf/masters <<EOF 
-masters
+master
 EOF
 
 cat > hadoop-home/conf/slaves <<EOF 
@@ -62,3 +62,4 @@ slave1
 slave2
 slave3
 EOF
+echo "PATH=/home/vagrant/hadoop-home/bin:$PATH" >> /home/vagrant/.bashrc

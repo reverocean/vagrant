@@ -1,0 +1,35 @@
+#!/bin/bash
+wget http://apache.fayea.com/apache-mirror/zookeeper/stable/zookeeper-3.4.5.tar.gz
+tar -zxvf zookeeper-3.4.5.tar.gz
+mv zookeeper-3.4.5 zookeeper
+mkdir /home/vagrant/zookeeper/data
+mkdir /home/vagrant/zookeeper/logs
+mv /home/vagrant/zookeeper/conf/zoo_sample.cfg /home/vagrant/zookeeper/conf/zoo.cfg
+cat > zookeeper/conf/zoo.cfg <<EOF 
+# The number of milliseconds of each tick
+tickTime=2000
+# The number of ticks that the initial
+# synchronization phase can take
+initLimit=10
+# The number of ticks that can pass between
+# sending a request and getting an acknowledgement
+syncLimit=5
+# the directory where the snapshot is stored.
+# do not use /tmp for storage, /tmp here is just
+# example sakes.
+dataDir=/home/haiyang/zookeeper/zookeeper-data
+# the port at which the clients will connect
+clientPort=2181
+#
+# Be sure to read the maintenance section of the
+# administrator guide before turning on autopurge.
+#
+# http://zookeeper.apache.org/doc/current/zookeeperAdmin.html#sc_maintenance
+#
+# The number of snapshots to retain in dataDir
+#autopurge.snapRetainCount=3
+# Purge task interval in hours
+# Set to "0" to disable auto purge feature
+#autopurge.purgeInterval=1
+dataLogDir=/home/haiyang/zookeeper/logs
+EOF

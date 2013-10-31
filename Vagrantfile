@@ -34,4 +34,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     slave3.vm.provision "shell", path: "hosts_config.sh"
     #slave3.vm.provision "shell", path: "hadoop_config.sh"
   end
+  config.vm.define "zkServer" do |zkServer|
+    zkServer.vm.network :private_network, ip: "192.168.56.204"
+    zkServer.vm.host_name = "zkServer"
+    zkServer.vm.provision "shell", path: "hosts_config.sh"
+    #zkServer.vm.provision "shell", path: "hadoop_config.sh"
+  end
 end
